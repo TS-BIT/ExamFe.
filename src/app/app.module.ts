@@ -22,7 +22,8 @@ import { TrucksComponent } from './components/trucks/trucks.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'cars', component: CarsComponent },
-      { path: '**', redirectTo: '', pathMatch: 'full' },
+      { path: 'trucks', component: TrucksComponent },
+      { path: '**', redirectTo: 'cars', pathMatch: 'full' },
     ]),
   ],
   providers: [],

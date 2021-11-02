@@ -27,7 +27,7 @@
   <div>
     Passengers:
     <input
-      type="number"
+      type="number" min="0" max="99" step="1"
       #passengers="ngModel"
       ngModel
       name="passengers"
@@ -44,7 +44,7 @@
   <div>
     Weight:
     <input
-      type="number"
+      type="number" min="0.01" max="99.99" step="0.01"
       #weight="ngModel"
       ngModel
       name="weight"
@@ -99,7 +99,7 @@
       <td>{{item.id}}</td>
       <td>{{item.plate}}</td>
       <td>{{item.passengers}}</td>
-      <td>{{item.weight}}<br><input type="number" #weightInput="ngModel" name="weight" id="weight" [(ngModel)]="item.weight" ></td>
+      <td>{{item.weight}}<br><input type="number" min="0.01" max="99.99" step="0.01" #weightInput="ngModel" name="weight" id="weight" [(ngModel)]="item.weight" ></td>
       <td>{{item.priority ? "Yes" : "No"}}<input type="checkbox" #checkInput="ngModel" [(ngModel)]="item.priority" id="checkbox"/></td>
       <td>
         <button (click)="onUpdate(item)" class="btn btn-outline-success action">Update</button>
