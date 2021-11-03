@@ -8,13 +8,15 @@ import { AppComponent } from './components/app/app.component';
 import { CarsComponent } from './components/cars/cars.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TrucksComponent } from './components/trucks/trucks.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarsComponent,
     HeaderComponent,
-    TrucksComponent
+    TrucksComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { TrucksComponent } from './components/trucks/trucks.component';
     RouterModule.forRoot([
       { path: 'cars', component: CarsComponent },
       { path: 'trucks', component: TrucksComponent },
-      { path: '**', redirectTo: 'cars', pathMatch: 'full' },
+      { path: '', component: HomeComponent },
+      { path: '**', redirectTo: '', pathMatch: 'full' },
     ]),
   ],
   providers: [],
