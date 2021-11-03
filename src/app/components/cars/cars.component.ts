@@ -76,7 +76,7 @@ export class CarsComponent implements OnInit {
   addCar() {
     if (this.newCar.valid) {
       this._carsService
-        .createCar({ priority: 1, ...this.newCar.value })
+        .createCar({ priority: 0, ...this.newCar.value })
         .subscribe(
           (res) => {
             this.cars.push(res);
